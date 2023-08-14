@@ -1,0 +1,21 @@
+<!-- <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+           <form>
+             <div class="form-group">
+                <label></label>
+             </div>
+           </form>
+        </div>
+    </div>
+</div> -->
+<div class="container-fluid p-5" *ngIf="customerForm">
+    <form  [formGroup]="customerForm" (ngSubmit)="SubmitCustomerForm()">
+        <div class="d-flex flex-wrap col-md-12">
+            <div class="col-md-4 form-group">
+                <label>Name</label><span class="starmarks pl-1"> *</span>
+                <input type="text" formControlName="name" class="form-control" placeholder="Enter Name">
+            </div>
+        </div>
+    </form>
+</div>

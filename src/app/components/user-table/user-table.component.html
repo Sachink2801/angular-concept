@@ -1,0 +1,61 @@
+<div class="d-flex justify-content-end my-3">
+  <button class="btn btn-outline-primary bi bi-plus-lg p-2" routerLink="/form">
+    Add New
+  </button>
+</div>
+<div class="p-4 my-4 shadow-lg table-responsive">
+  <table class="table table-bordered caption-top">
+    <caption>
+      User List
+    </caption>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="row">No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Email ID</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Country</th>
+        <!-- <th scope="col">Hobbies</th> -->
+        <th scope="col">Current Address</th>
+        <th scope="col">Permanent Address</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user.name }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.city }}</td>
+        <td>{{ user.state }}</td>
+        <td>{{ user.country }}</td>
+        <!-- <td>{{ user.hobbies }}</td> -->
+        <td>{{ user.address1 }}</td>
+        <td>{{ user.address2 }}</td>
+        <td class="d-flex justify-content-between">
+          <button
+            class="btn btn-outline-success bi bi-pencil"
+            data-toggle="tooltip"
+            title="Edit"
+            (click)="editUser(user, i)"
+          ></button>
+          <button
+            class="mx-2 btn btn-outline-primary bi bi-eye"
+            data-toggle="tooltip"
+            title="View"
+            (click)="viewUser(user, i)"
+          ></button>
+          <button
+            class="btn btn-outline-danger bi bi-trash3"
+            data-toggle="tooltip"
+            title="Delete"
+            (click)="deleteUser(user, i)"
+          ></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

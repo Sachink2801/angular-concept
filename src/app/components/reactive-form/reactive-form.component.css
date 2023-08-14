@@ -1,0 +1,19 @@
+label::after {
+  content: "*";
+  color: red;
+  margin-left: 8px;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 620px) {
+  .row {
+    display: block;
+  }
+
+  .row > div {
+    width: 100%;
+  }
+}

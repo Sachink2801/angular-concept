@@ -1,0 +1,117 @@
+<form
+  [formGroup]="userForm"
+  (ngSubmit)="onSubmit()"
+  class="p-4 my-4 container shadow-lg"
+>
+  <h1 class="text-center mb-3">User Details Form</h1>
+  <!-- first row -->
+  <div class="row align-items-center mb-3">
+    <div class="col-4">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        placeholder="Enter Name"
+        formControlName="name"
+      />
+    </div>
+    <div class="col-4">
+      <label for="Gender" class="form-label">Gender</label>
+      <select
+        class="form-select"
+        formControlName="gender"
+        aria-label="Default select"
+      >
+        <option selected="">Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div class="col-4">
+      <label for="email" class="form-label">Email ID</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter email ID"
+        formControlName="email"
+      />
+    </div>
+  </div>
+  <!-- second row -->
+  <div class="row align-items-center mb-3">
+    <div class="col-4">
+      <label for="city" class="form-label">City</label>
+      <input
+        type="text"
+        id="city"
+        class="form-control"
+        placeholder="Enter City"
+        formControlName="city"
+      />
+    </div>
+    <div class="col-4">
+      <label for="state" class="form-label">State</label>
+      <input
+        type="text"
+        id="state"
+        class="form-control"
+        placeholder="Enter state"
+        formControlName="state"
+      />
+    </div>
+    <div class="col-4">
+      <label for="country" class="form-label">Country</label>
+      <input
+        type="text"
+        id="country"
+        class="form-control"
+        placeholder="Enter country"
+        formControlName="country"
+      />
+    </div>
+  </div>
+  <!-- third row -->
+  <div class="row align-items-center mb-3">
+    <!-- <div class="col-4">
+      <label for="country" class="form-label">Hobbies</label>
+      <app-multi-select formControlName="hobbies"></app-multi-select>
+    </div> -->
+    <div class="col-4">
+      <label for="address1" class="form-label">Address 1</label>
+      <textarea
+        type="text"
+        id="address1"
+        class="form-control"
+        placeholder="Enter Current Address"
+        formControlName="address1"
+      ></textarea>
+    </div>
+    <div class="col-4">
+      <label for="address2" class="form-label">Address 1</label>
+      <textarea
+        type="text"
+        id="address2"
+        class="form-control"
+        placeholder="Enter Permanent Address"
+        formControlName="address2"
+      ></textarea>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end row align-items-center mt-4">
+    <button
+      class="col-auto btn btn-outline-danger m-4 bi bi-x-lg"
+      routerLink="/"
+    >
+      Cancel
+    </button>
+    <button
+      type="submit"
+      class="col-auto btn btn-outline-success bi bi-check-lg"
+      [disabled]="!userForm.valid"
+    >
+      {{ buttonText }}
+    </button>
+  </div>
+</form>

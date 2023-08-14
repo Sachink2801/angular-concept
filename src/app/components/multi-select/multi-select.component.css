@@ -1,0 +1,9 @@
+.hobbies {
+  position: absolute;
+}
+
+@media screen and (max-width: 620px) {
+  .hobbies {
+    position: relative;
+  }
+}

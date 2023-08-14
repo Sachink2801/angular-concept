@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Pramod",
+      "gender": "male",
+      "email": "ppowar@gmail.com",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "hobbies": ["Music", "Art", "Sports"],
+      "address1": "B-129, Ghatkopar Indl Estate, Lbs Marg, Ghatkopar (w)",
+      "address2": "B-129, Ghatkopar Indl Estate, Lbs Marg, Ghatkopar (w)"
+    },
+    {
+      "id": 2,
+      "name": "Keval",
+      "gender": "male",
+      "email": "kvc12@gmail.com",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "hobbies": ["Art", "Sports"],
+      "address1": "8/9, 12/14, Pilanmai Bldg, Vaju Kotak Road, Fort",
+      "address2": "8/9, 12/14, Pilanmai Bldg, Vaju Kotak Road, Fort"
+    },
+    {
+      "id": 3,
+      "name": "Pratik",
+      "gender": "male",
+      "email": "pjadhav@gmail.com",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "hobbies": ["Art", "Sports", "Dance"],
+      "address1": "173, 5/b, Sanjay Bldg, Andheri Kurla Road, Mittal Ind. Estate, Andheri(e)",
+      "address2": "A-1 Ratnajyot Bldg., 60 Feet Road, Bhayander (west)"
+    }
+  ]
+}
